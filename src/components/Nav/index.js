@@ -1,40 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function Nav(props) {
-	const { contactSelected, setContactSelected } = props;
+	const { categories, setCurrentCategory, currentCategory } = props;
 
-	const handleClick = (item) => {
-		console.log(item);
-		return item;
-	};
+	useEffect(() => {
+		document.title = currentCategory.name;
+	}, [currentCategory]);
 
 	return (
-		<header className='flex-row px-1'>
+		<header className="flex-row space-between">
 			<h2>
-				<a data-testid='link' href='/'>
-					Florence Kamp
-				</a>
+				<a href="/">Florence Kamp</a>
 			</h2>
 			<nav>
-				<ul className='flex-row'>
-					<li className='mx-2'>
-						<a href='#about' onClick={() => setContactSelected(false)}>
-							about
-						</a>
-					</li>
-					<li className='mx-2'>
-						<a href='#portfolio' onClick={() => setContactSelected(false)}>
-							portfolio
-						</a>
-					</li>
-					<li className='mx-2'>
-						<a href='#resume' onClick={() => setContactSelected(false)}>
-							resume
-						</a>
-					</li>
-					<li className={`mx-2 ${contactSelected && "navActive"}`}>
-						<a onClick={() => setContactSelected(true)}>contact</a>
-					</li>
+				<ul className="flex-row">
+					{categories.map((category) => (
+						<li
+							className={`mx-1 ${currentCategory === category && `navActive`}`}
+							key={category}>
+							<a
+								onClick={() => {
+									setCurrentCategory(category);
+								}}>
+								{category}
+							</a>
+						</li>
+					))}
 				</ul>
 			</nav>
 		</header>
