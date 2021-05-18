@@ -4,7 +4,7 @@ function Nav(props) {
 	const { categories, setCurrentCategory, currentCategory } = props;
 
 	useEffect(() => {
-		document.title = currentCategory.name;
+		document.title = currentCategory;
 	}, [currentCategory]);
 
 	return (
@@ -19,6 +19,7 @@ function Nav(props) {
 							className={`mx-1 ${currentCategory === category && `navActive`}`}
 							key={category}>
 							<a
+								href={`#${category}`}
 								onClick={() => {
 									setCurrentCategory(category);
 								}}>

@@ -4,7 +4,7 @@ main {
 	padding: 50px 30px;
 }
 :root {
-	--primary: #8c54ff;
+	--primary: #fbe15e;
 	--secondary: #dadada;
 	--tertiary: #b12704;
 	--light: #fafafa;
@@ -81,23 +81,17 @@ p {
 	font-weight: 400;
 }
 
-a {
-	color: var(--tertiary);
-	text-decoration: none;
-	font-weight: bold;
+header {
+	padding: 32px;
+	margin-bottom: 32px;
+}
+
+header a {
+	color: var(--dark);
 }
 
 a:hover {
 	text-decoration: underline;
-}
-
-header {
-	padding: 0 32px;
-	background: var(--dark);
-}
-
-header a {
-	color: var(--light);
 }
 
 button {
@@ -144,7 +138,7 @@ li {
 }
 
 nav a:hover {
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 nav li {
@@ -254,16 +248,12 @@ button {
 }
 
 a {
-	border-radius: 5px;
-	color: var(--light);
 	font-weight: 600;
-	padding: 2px 4px;
-	margin-left: -2px;
-	margin-right: -2px;
+	padding: 6px 8px;
 }
 
 .navActive {
-	color: var(--secondary);
+	background-color: var(--primary);
 }
 
 .headshot-circle {
