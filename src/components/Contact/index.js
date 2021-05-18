@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { validateEmail } from "../../utils/helpers";
 
-function ContactForm() {
+function Contact() {
 	const [formState, setFormState] = useState({
 		name: "",
 		email: "",
@@ -42,44 +42,44 @@ function ContactForm() {
 	console.log(formState);
 	return (
 		<section>
-			<h1>Contact me</h1>
-			<form id='contact-form' onSubmit={handleSubmit}>
-				<div>
-					<label htmlFor='name'>Name:</label>
+			<form id="contact-form" onSubmit={handleSubmit}>
+				<h1>Contact me 💬</h1>
+				<div className="contact-input">
+					<label htmlFor="name">Name:</label>
 					<input
-						type='text'
+						type="text"
 						defaultValue={name}
 						onChange={handleChange}
-						name='name'
+						name="name"
 					/>
 				</div>
-				<div>
-					<label htmlFor='email'>Email address:</label>
+				<div className="contact-input">
+					<label htmlFor="email">Email address:</label>
 					<input
-						type='email'
+						type="email"
 						defaultValue={email}
-						name='email'
+						name="email"
 						onChange={handleChange}
 					/>
 				</div>
-				<div>
-					<label htmlFor='message'>Message:</label>
+				<div className="contact-input">
+					<label htmlFor="message">Message:</label>
 					<textarea
-						name='message'
+						name="message"
 						defaultValue={message}
 						onChange={handleChange}
-						rows='5'
+						rows="5"
 					/>
 				</div>
 				{errorMessage && (
 					<div>
-						<p className='error-text'>{errorMessage}</p>
+						<p className="error-text">{errorMessage}</p>
 					</div>
 				)}
-				<button type='submit'>Submit</button>
+				<button type="submit">Submit</button>
 			</form>
 		</section>
 	);
 }
 
-export default ContactForm;
+export default Contact;

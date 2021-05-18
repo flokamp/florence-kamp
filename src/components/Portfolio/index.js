@@ -5,7 +5,7 @@ function Portfolio() {
 		{
 			title: "Zing",
 			description:
-				"An Socket.IO powered app for creating and joining live chat rooms.",
+				"A Socket.IO powered app for creating and joining live chat rooms.",
 			git: "https://github.com/JamesLuu96/zing",
 			demo: "https://zing-chat.herokuapp.com/login",
 			image: "zing",
@@ -35,7 +35,7 @@ function Portfolio() {
 		},
 		{
 			title: "Sidenotes",
-			description: "An app for taking quick notes.",
+			description: "A simple app for taking quick notes.",
 			git: "https://github.com/flokamp/note-taker-2",
 			demo: "https://my-note-taker-project.herokuapp.com/",
 			image: "note-taker",
@@ -50,32 +50,29 @@ function Portfolio() {
 	];
 
 	return (
-		<div>
-			<div>
-				{projects.map((project) => (
-					<div className="project-card flex-row">
-						<img
-							style={{ width: "25%" }}
-							src={require(`../../assets/projects/${project.image}.png`)}
-							className="img-thumbnail"
-							alt={`${project.image}`}
-						/>
+		<div className="flex-row">
+			{projects.map((project) => (
+				<div className="project-card">
+					<img
+						src={require(`../../assets/projects/${project.image}.png`)}
+						className="img-thumbnail"
+						alt={`${project.image}`}
+					/>
 
-						<div className="project-info mx-2">
-							<h2 className="my-2">{project.title}</h2>
-							<p>{project.description}</p>
-							<div className="links">
-								<a target="_blank" href={`${project.demo}`} class="btn-link">
-									Demo
-								</a>
-								<a target="_blank" href={`${project.git}`} class="btn-link">
-									GitHub
-								</a>
-							</div>
+					<div className="project-info mx-2 my-2">
+						<h2 className="my-2">{project.title}</h2>
+						<p>{project.description}</p>
+						<div className="links">
+							<a target="_blank" href={`${project.demo}`} className="btn-link">
+								Demo →
+							</a>
+							<a target="_blank" href={`${project.git}`} className="btn-link">
+								GitHub →
+							</a>
 						</div>
 					</div>
-				))}
-			</div>
+				</div>
+			))}
 		</div>
 	);
 }
