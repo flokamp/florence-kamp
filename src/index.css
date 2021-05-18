@@ -54,7 +54,6 @@ h1 {
 
 h2 {
 	font-size: 2rem;
-	margin-bottom: 16px;
 }
 
 h3 {
@@ -182,6 +181,11 @@ textarea {
 	margin-left: var(--spacing-two);
 }
 
+.mx-5 {
+	margin-right: var(--spacing-five);
+	margin-left: var(--spacing-five);
+}
+
 .my-1 {
 	margin-top: var(--spacing-one);
 	margin-bottom: var(--spacing-one);
@@ -222,14 +226,6 @@ textarea {
 	text-align: center;
 }
 
-.project-card {
-	width: 40%;
-	height: auto;
-	margin: 16px;
-	position: relative;
-	display: inline-block;
-}
-
 img {
 	position: relative;
 	width: 100%; /* for IE 6 */
@@ -247,21 +243,15 @@ button {
 	padding: 10px 15px;
 }
 
-a {
-	font-weight: 600;
-	padding: 6px 8px;
-}
-
 .navActive {
 	background-color: var(--primary);
 }
 
 .headshot-circle {
 	position: relative;
-	width: 20vw;
-	height: 20vw;
+	width: 24vw;
+	height: 28vw;
 	overflow: hidden;
-	border-radius: 50%;
 	margin-right: 6%;
 	border: 4px solid black;
 }
@@ -272,13 +262,17 @@ a {
 	object-fit: cover;
 }
 
-.project-info {
-	position: absolute;
-	z-index: 999;
-	margin: 0 auto;
-	left: 0;
-	right: 0;
-	top: 40%; /* Adjust this value to move the positioned div up and down */
-	text-align: center;
-	width: 60%; /* Set the width of the positioned div */
+.project-card {
+	box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	height: auto;
+	margin: 32px;
+	overflow: hidden;
+}
+
+.btn-link {
+	font-weight: 400;
+	color: var(--dark);
+	text-decoration: none;
+	padding: 0 8px 0 0;
 }

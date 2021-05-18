@@ -5,7 +5,7 @@ function Portfolio() {
 		{
 			title: "Zing",
 			description:
-				"An app powered by Socket.IO that allows users to create and join live chat rooms.",
+				"An Socket.IO powered app for creating and joining live chat rooms.",
 			git: "https://github.com/JamesLuu96/zing",
 			demo: "https://zing-chat.herokuapp.com/login",
 			image: "zing",
@@ -13,7 +13,7 @@ function Portfolio() {
 		{
 			title: "Who you gonna call?",
 			description:
-				"An app that helps streamline contact with local reps in charge of managing the pandemic.",
+				"An app that helps streamline contact with local reps managing the pandemic.",
 			git: "https://github.com/JPKashlak/who-you-gonna-call",
 			demo: "https://jpkashlak.github.io/who-you-gonna-call/",
 			image: "who-you-gonna-call",
@@ -53,17 +53,26 @@ function Portfolio() {
 		<div>
 			<div>
 				{projects.map((project) => (
-					<div class='project-card'>
-						<span class='project-info'>
-							<h4>{project.title}</h4>
-						</span>
-
+					<div className="project-card flex-row">
 						<img
-							style={{ position: "relative" }}
+							style={{ width: "25%" }}
 							src={require(`../../assets/projects/${project.image}.png`)}
-							className='img-thumbnail mx-1'
-							alt=''
+							className="img-thumbnail"
+							alt={`${project.image}`}
 						/>
+
+						<div className="project-info mx-2">
+							<h2 className="my-2">{project.title}</h2>
+							<p>{project.description}</p>
+							<div className="links">
+								<a target="_blank" href={`${project.demo}`} class="btn-link">
+									Demo
+								</a>
+								<a target="_blank" href={`${project.git}`} class="btn-link">
+									GitHub
+								</a>
+							</div>
+						</div>
 					</div>
 				))}
 			</div>
