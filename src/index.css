@@ -120,14 +120,6 @@ button[disabled] {
 	opacity: 0.8;
 }
 
-img {
-	max-width: 100%;
-}
-
-span[role="img"] {
-	cursor: default;
-}
-
 form {
 	width: 40%;
 }
@@ -163,13 +155,6 @@ textarea {
 	height: 120px;
 	border: 3px solid #cccccc;
 	padding: 5px;
-}
-
-.container {
-	width: 85%;
-	max-width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .flex-row {
@@ -236,9 +221,16 @@ textarea {
 }
 
 .project-card {
-	width: 240px;
+	width: 40%;
+	height: auto;
 	margin: 16px;
-	cursor: pointer;
+	position: relative;
+	display: inline-block;
+}
+
+img {
+	position: relative;
+	width: 100%; /* for IE 6 */
 }
 
 button {
@@ -280,4 +272,15 @@ a {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+.project-info {
+	position: absolute;
+	z-index: 999;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: 40%; /* Adjust this value to move the positioned div up and down */
+	text-align: center;
+	width: 60%; /* Set the width of the positioned div */
 }
