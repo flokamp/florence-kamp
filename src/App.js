@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Nav from "./components/Nav";
 import About from "./components/About";
-import Contact from "./components/Contact";
+import ContactForm from "./components/Contact";
 import Portfolio from "./components/Portfolio";
 import Resume from "./components/Resume";
+import Footer from "./components/Footer";
 
 function App() {
 	const categories = ["About", "Portfolio", "Resume", "Contact"];
@@ -19,8 +20,9 @@ function App() {
 				{currentCategory === "About" && <About />}
 				{currentCategory === "Portfolio" && <Portfolio />}
 				{currentCategory === "Resume" && <Resume />}
-				{currentCategory === "Contact" && <Contact />}
+				{currentCategory === "Contact" && <ContactForm />}
 			</main>
+			<Footer />
 		</div>
 	);
 }

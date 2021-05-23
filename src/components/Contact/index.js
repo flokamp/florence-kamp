@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { validateEmail } from "../../utils/helpers";
 
-function Contact() {
+function ContactForm() {
 	const [formState, setFormState] = useState({
 		name: "",
 		email: "",
@@ -41,11 +41,11 @@ function Contact() {
 
 	console.log(formState);
 	return (
-		<section>
+		<div className="flex-row">
 			<form id="contact-form" onSubmit={handleSubmit}>
 				<h1>Contact me 💬</h1>
 				<div className="contact-input">
-					<label htmlFor="name">Name:</label>
+					<label htmlFor="name">Name</label>
 					<input
 						type="text"
 						defaultValue={name}
@@ -54,7 +54,7 @@ function Contact() {
 					/>
 				</div>
 				<div className="contact-input">
-					<label htmlFor="email">Email address:</label>
+					<label htmlFor="email">Email</label>
 					<input
 						type="email"
 						defaultValue={email}
@@ -63,7 +63,7 @@ function Contact() {
 					/>
 				</div>
 				<div className="contact-input">
-					<label htmlFor="message">Message:</label>
+					<label htmlFor="message">Message</label>
 					<textarea
 						name="message"
 						defaultValue={message}
@@ -78,8 +78,8 @@ function Contact() {
 				)}
 				<button type="submit">Submit</button>
 			</form>
-		</section>
+		</div>
 	);
 }
 
-export default Contact;
+export default ContactForm;
