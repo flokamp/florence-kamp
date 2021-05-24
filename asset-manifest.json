@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/florence-kamp/static/css/main.fe3ef0fb.chunk.css",
-    "main.js": "/florence-kamp/static/js/main.4a6eae75.chunk.js",
-    "main.js.map": "/florence-kamp/static/js/main.4a6eae75.chunk.js.map",
-    "runtime-main.js": "/florence-kamp/static/js/runtime-main.e573cc02.js",
-    "runtime-main.js.map": "/florence-kamp/static/js/runtime-main.e573cc02.js.map",
+    "main.css": "/florence-kamp/static/css/main.13db6b83.chunk.css",
+    "main.js": "/florence-kamp/static/js/main.8b64806f.chunk.js",
+    "main.js.map": "/florence-kamp/static/js/main.8b64806f.chunk.js.map",
+    "runtime-main.js": "/florence-kamp/static/js/runtime-main.25c12495.js",
+    "runtime-main.js.map": "/florence-kamp/static/js/runtime-main.25c12495.js.map",
     "static/js/2.5c5ebaae.chunk.js": "/florence-kamp/static/js/2.5c5ebaae.chunk.js",
     "static/js/2.5c5ebaae.chunk.js.map": "/florence-kamp/static/js/2.5c5ebaae.chunk.js.map",
-    "static/js/3.db84a593.chunk.js": "/florence-kamp/static/js/3.db84a593.chunk.js",
-    "static/js/3.db84a593.chunk.js.map": "/florence-kamp/static/js/3.db84a593.chunk.js.map",
+    "static/js/3.fd56e7d5.chunk.js": "/florence-kamp/static/js/3.fd56e7d5.chunk.js",
+    "static/js/3.fd56e7d5.chunk.js.map": "/florence-kamp/static/js/3.fd56e7d5.chunk.js.map",
     "c5d722dc57c1a22fc0123826fb375e84.js": "/florence-kamp/c5d722dc57c1a22fc0123826fb375e84.js",
     "index.html": "/florence-kamp/index.html",
-    "precache-manifest.2650075e9a8c8df68886fa039e13979c.js": "/florence-kamp/precache-manifest.2650075e9a8c8df68886fa039e13979c.js",
+    "precache-manifest.20caf3c4dcb856cd863d7aa9faac0a90.js": "/florence-kamp/precache-manifest.20caf3c4dcb856cd863d7aa9faac0a90.js",
     "service-worker.js": "/florence-kamp/service-worker.js",
-    "static/css/main.fe3ef0fb.chunk.css.map": "/florence-kamp/static/css/main.fe3ef0fb.chunk.css.map",
+    "static/css/main.13db6b83.chunk.css.map": "/florence-kamp/static/css/main.13db6b83.chunk.css.map",
     "static/js/2.5c5ebaae.chunk.js.LICENSE.txt": "/florence-kamp/static/js/2.5c5ebaae.chunk.js.LICENSE.txt",
     "static/media/budgie.png": "/florence-kamp/static/media/budgie.fe79030e.png",
     "static/media/headshot.jpg": "/florence-kamp/static/media/headshot.c9e4c1c3.jpg",
@@ -26,9 +26,9 @@
     "static/media/zing.png": "/florence-kamp/static/media/zing.4dd31d7e.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.e573cc02.js",
+    "static/js/runtime-main.25c12495.js",
     "static/js/2.5c5ebaae.chunk.js",
-    "static/css/main.fe3ef0fb.chunk.css",
-    "static/js/main.4a6eae75.chunk.js"
+    "static/css/main.13db6b83.chunk.css",
+    "static/js/main.8b64806f.chunk.js"
   ]
 }
