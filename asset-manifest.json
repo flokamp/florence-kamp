@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/florence-kamp/static/css/main.13db6b83.chunk.css",
-    "main.js": "/florence-kamp/static/js/main.8b64806f.chunk.js",
-    "main.js.map": "/florence-kamp/static/js/main.8b64806f.chunk.js.map",
-    "runtime-main.js": "/florence-kamp/static/js/runtime-main.25c12495.js",
-    "runtime-main.js.map": "/florence-kamp/static/js/runtime-main.25c12495.js.map",
-    "static/js/2.5c5ebaae.chunk.js": "/florence-kamp/static/js/2.5c5ebaae.chunk.js",
-    "static/js/2.5c5ebaae.chunk.js.map": "/florence-kamp/static/js/2.5c5ebaae.chunk.js.map",
-    "static/js/3.fd56e7d5.chunk.js": "/florence-kamp/static/js/3.fd56e7d5.chunk.js",
-    "static/js/3.fd56e7d5.chunk.js.map": "/florence-kamp/static/js/3.fd56e7d5.chunk.js.map",
-    "c5d722dc57c1a22fc0123826fb375e84.js": "/florence-kamp/c5d722dc57c1a22fc0123826fb375e84.js",
+    "main.css": "/florence-kamp/static/css/main.0198aece.chunk.css",
+    "main.js": "/florence-kamp/static/js/main.28611e3e.chunk.js",
+    "main.js.map": "/florence-kamp/static/js/main.28611e3e.chunk.js.map",
+    "runtime-main.js": "/florence-kamp/static/js/runtime-main.d72eda25.js",
+    "runtime-main.js.map": "/florence-kamp/static/js/runtime-main.d72eda25.js.map",
+    "static/js/2.e9f5cce4.chunk.js": "/florence-kamp/static/js/2.e9f5cce4.chunk.js",
+    "static/js/2.e9f5cce4.chunk.js.map": "/florence-kamp/static/js/2.e9f5cce4.chunk.js.map",
+    "static/js/3.ea4cc07a.chunk.js": "/florence-kamp/static/js/3.ea4cc07a.chunk.js",
+    "static/js/3.ea4cc07a.chunk.js.map": "/florence-kamp/static/js/3.ea4cc07a.chunk.js.map",
+    "pdf.worker.js": "/florence-kamp/c5d722dc57c1a22fc0123826fb375e84.js",
     "index.html": "/florence-kamp/index.html",
-    "precache-manifest.20caf3c4dcb856cd863d7aa9faac0a90.js": "/florence-kamp/precache-manifest.20caf3c4dcb856cd863d7aa9faac0a90.js",
+    "precache-manifest.5d84393f5522162e993edb7fb942b9db.js": "/florence-kamp/precache-manifest.5d84393f5522162e993edb7fb942b9db.js",
     "service-worker.js": "/florence-kamp/service-worker.js",
-    "static/css/main.13db6b83.chunk.css.map": "/florence-kamp/static/css/main.13db6b83.chunk.css.map",
-    "static/js/2.5c5ebaae.chunk.js.LICENSE.txt": "/florence-kamp/static/js/2.5c5ebaae.chunk.js.LICENSE.txt",
+    "static/css/main.0198aece.chunk.css.map": "/florence-kamp/static/css/main.0198aece.chunk.css.map",
+    "static/js/2.e9f5cce4.chunk.js.LICENSE.txt": "/florence-kamp/static/js/2.e9f5cce4.chunk.js.LICENSE.txt",
     "static/media/budgie.png": "/florence-kamp/static/media/budgie.fe79030e.png",
     "static/media/headshot.jpg": "/florence-kamp/static/media/headshot.c9e4c1c3.jpg",
     "static/media/note-taker.png": "/florence-kamp/static/media/note-taker.e0b83f86.png",
@@ -26,9 +26,9 @@
     "static/media/zing.png": "/florence-kamp/static/media/zing.4dd31d7e.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.25c12495.js",
-    "static/js/2.5c5ebaae.chunk.js",
-    "static/css/main.13db6b83.chunk.css",
-    "static/js/main.8b64806f.chunk.js"
+    "static/js/runtime-main.d72eda25.js",
+    "static/js/2.e9f5cce4.chunk.js",
+    "static/css/main.0198aece.chunk.css",
+    "static/js/main.28611e3e.chunk.js"
   ]
 }
