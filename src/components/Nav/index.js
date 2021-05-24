@@ -9,7 +9,9 @@ function Nav(props) {
 
 	return (
 		<header className="flex-row">
-			<h3>Florence Kamp</h3>
+			<h3>
+				<a href="/"> Florence Kamp </a>
+			</h3>
 			<nav>
 				<ul className="flex-row">
 					{categories.map((category) => (
