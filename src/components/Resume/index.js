@@ -4,7 +4,7 @@ import { Document, Page } from "react-pdf/dist/umd/entry.webpack";
 import resumePDF from "../../assets/resume.pdf";
 
 function Resume() {
-	const [numPages, setNumPages] = useState(null);
+	const [numPages, setNumPages] = useState(1);
 	const [pageNumber, setPageNumber] = useState(1);
 
 	function onDocumentLoadSuccess({ numPages }) {
