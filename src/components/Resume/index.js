@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
+import { Document, Page } from "react-pdf/dist/umd/entry.webpack";
+
 import resumePDF from "../../assets/resume.pdf";
 
 function Resume() {
@@ -11,15 +12,15 @@ function Resume() {
 	}
 
 	return (
-		<div>
-			<a href={resumePDF} download="resume.pdf">
-				Download
-			</a>
+		<section id="resume">
+			<button id="download-btn" href={resumePDF} download="resume.pdf">
+				Download resume
+			</button>
 
 			<Document file={resumePDF} onLoadSuccess={onDocumentLoadSuccess}>
 				<Page pageNumber={pageNumber} />
 			</Document>
-		</div>
+		</section>
 	);
 }
 

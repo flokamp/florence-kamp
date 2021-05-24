@@ -1,5 +1,4 @@
 import React from "react";
-import githubImg from "../../assets/github.png";
 
 function Footer() {
 	return (
