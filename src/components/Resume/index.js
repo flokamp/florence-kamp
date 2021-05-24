@@ -12,6 +12,10 @@ function Resume() {
 
 	return (
 		<div>
+			<a href={resumePDF} download="resume.pdf">
+				Download
+			</a>
+
 			<Document file={resumePDF} onLoadSuccess={onDocumentLoadSuccess}>
 				<Page pageNumber={pageNumber} />
 			</Document>
