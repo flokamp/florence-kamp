@@ -50,7 +50,7 @@ function Portfolio() {
 	];
 
 	return (
-		<div className="flex-row">
+		<div class="projects">
 			{projects.map((project) => (
 				<div className="project-card">
 					<img
@@ -59,8 +59,8 @@ function Portfolio() {
 						alt={`${project.image}`}
 					/>
 
-					<div className="project-info mx-2 my-2">
-						<h2 className="my-2">{project.title}</h2>
+					<div className="project-info">
+						<h3>{project.title}</h3>
 						<p>{project.description}</p>
 						<div className="links">
 							<a target="_blank" href={`${project.demo}`} className="btn-link">

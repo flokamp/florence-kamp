@@ -3,8 +3,8 @@ import headshotImage from "../../assets/headshot.jpg";
 
 function About() {
 	return (
-		<section id="about" className="flex-row">
-			<div className="headshot-circle">
+		<section id="about">
+			<div className="headshot-container">
 				<img id="headshot" src={headshotImage} alt="headshot" />
 			</div>
 			<div className="px-2" style={{ width: "60%" }}>

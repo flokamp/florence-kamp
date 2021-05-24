@@ -8,12 +8,11 @@ function Nav(props) {
 	}, [currentCategory]);
 
 	return (
-		<header className="flex-row">
-			<h3>
-				<a href="/"> Florence Kamp </a>
-			</h3>
+		<header>
+			<a href="/"> Florence Kamp </a>
+
 			<nav>
-				<ul className="flex-row">
+				<ul>
 					{categories.map((category) => (
 						<li
 							className={`${currentCategory === category && `navActive`}`}
