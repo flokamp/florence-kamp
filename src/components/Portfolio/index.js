@@ -1,4 +1,16 @@
 import React from "react";
+import {
+	Card,
+	CardBody,
+	Image,
+	Box,
+	Heading,
+	Text,
+	CardHeader,
+	CardFooter,
+	Grid,
+} from "grommet";
+
 import zingImg from "../../assets/zing.png";
 import whoyougonnacallImg from "../../assets/who-you-gonna-call.png";
 import budgieImg from "../../assets/budgie.png";
@@ -6,7 +18,7 @@ import techblogImg from "../../assets/techblog.png";
 import sidenotesImg from "../../assets/note-taker.png";
 import teamprofileImg from "../../assets/team-profile-generator.png";
 
-function Portfolio() {
+export default function Portfolio() {
 	const projects = [
 		{
 			title: "Zing",
@@ -56,36 +68,37 @@ function Portfolio() {
 	];
 
 	return (
-		<div class="projects">
+		<Grid
+			gap="large"
+			rows="medium"
+			columns={{ count: "fit", size: ["small", "medium"] }}
+			justifyContent="center">
 			{projects.map((project) => (
-				<div className="project-card">
-					<img
-						src={`${project.image}`}
-						className="img-thumbnail"
-						alt={`${project.image}`}
-						key={project.image}
-					/>
-
-					<div className="project-info">
-						<h3>{project.title}</h3>
-						<p>{project.description}</p>
-						<div className="links">
-							<a
-								target="_blank"
-								href={`${project.demo}`}
-								className="btn-link
-              key={project.image}">
-								Demo →
-							</a>
-							<a target="_blank" href={`${project.git}`} className="btn-link">
-								GitHub →
-							</a>
-						</div>
-					</div>
-				</div>
+				<Card width="medium" key={`${project.title}`}>
+					<CardBody height="small">
+						<Image
+							fit="cover"
+							src={`${project.image}`}
+							a11yTitle={`${project.title}`}
+						/>
+					</CardBody>
+					<Box pad={{ horizontal: "medium" }} responsive={true}>
+						<CardHeader
+							pad={{ horizontal: "xsmall", vertical: "xsmall" }}
+							justify="start">
+							<Box justify="start" background="light">
+								<Heading justify="start" level="4" margin="none">
+									{`${project.title}`}
+								</Heading>
+								<Text align="start" size="small">
+									{`${project.description}`}
+								</Text>
+							</Box>
+						</CardHeader>
+					</Box>
+					<CardFooter></CardFooter>
+				</Card>
 			))}
-		</div>
+		</Grid>
 	);
 }
-
-export default Portfolio;

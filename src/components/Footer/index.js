@@ -1,13 +1,13 @@
 import React from "react";
+import { Footer } from "grommet";
+import { Github, Linkedin, Instagram } from "grommet-icons";
 
-function Footer() {
+export default function FooterEl() {
 	return (
-		<footer className="flex-row">
-			<i className="fab fa-github"></i>
-			<i className="fab fa-linkedin-in"></i>
-			<i className="fab fa-instagram"></i>
-		</footer>
+		<Footer background="light-2">
+			<Github />
+			<Linkedin />
+			<Instagram />
+		</Footer>
 	);
 }
-
-export default Footer;
