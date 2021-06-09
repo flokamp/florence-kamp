@@ -6,9 +6,8 @@ import {
 	Box,
 	Heading,
 	Text,
-	CardHeader,
-	CardFooter,
 	Grid,
+	Button,
 } from "grommet";
 
 import zingImg from "../../assets/zing.png";
@@ -74,29 +73,43 @@ export default function Portfolio() {
 			columns={{ count: "fit", size: ["small", "medium"] }}
 			justifyContent="center">
 			{projects.map((project) => (
-				<Card width="medium" key={`${project.title}`}>
-					<CardBody height="small">
+				<Card
+					align="start"
+					round="4px"
+					elevation="small"
+					width="medium"
+					key={`${project.title}`}>
+					<CardBody height="xsmall">
 						<Image
 							fit="cover"
 							src={`${project.image}`}
 							a11yTitle={`${project.title}`}
 						/>
 					</CardBody>
-					<Box pad={{ horizontal: "medium" }} responsive={true}>
-						<CardHeader
-							pad={{ horizontal: "xsmall", vertical: "xsmall" }}
-							justify="start">
-							<Box justify="start" background="light">
-								<Heading justify="start" level="4" margin="none">
-									{`${project.title}`}
-								</Heading>
-								<Text align="start" size="small">
-									{`${project.description}`}
-								</Text>
+					<Box pad="small" responsive={true}>
+						<Box background="light">
+							<Heading level="4" margin="xsmall">
+								{`${project.title}`}
+							</Heading>
+							<Text margin="xsmall" size="small">
+								{`${project.description}`}
+							</Text>
+							<Box align="start" fill="horizontal" direction="row">
+								<Button
+									size="small"
+									margin="xsmall"
+									href={`${project.git}`}
+									label="Github"
+								/>
+								<Button
+									margin="xsmall"
+									size="small"
+									href={`${project.demo}`}
+									label="Demo"
+								/>
 							</Box>
-						</CardHeader>
+						</Box>
 					</Box>
-					<CardFooter></CardFooter>
 				</Card>
 			))}
 		</Grid>

@@ -4,7 +4,7 @@ import { Github, Linkedin, Instagram } from "grommet-icons";
 
 export default function FooterEl() {
 	return (
-		<Footer background="light-2">
+		<Footer pad={{ horizontal: "40%" }} background="light-2">
 			<Github />
 			<Linkedin />
 			<Instagram />

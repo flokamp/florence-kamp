@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Form, FormField, TextInput, TextArea, Box } from "grommet";
+
 import { validateEmail } from "../../utils/helpers";
 
 function ContactForm() {
@@ -21,12 +23,6 @@ function ContactForm() {
 			} else {
 				setErrorMessage("");
 			}
-		} else {
-			if (!e.target.value.length) {
-				setErrorMessage(`${e.target.name} is required.`);
-			} else {
-				setErrorMessage("");
-			}
 		}
 
 		if (!errorMessage) {
@@ -41,44 +37,45 @@ function ContactForm() {
 
 	console.log(formState);
 	return (
-		<div className="flex-row">
-			<form id="contact-form" onSubmit={handleSubmit}>
-				<h1>Contact me 💬</h1>
-				<div className="contact-input">
-					<label htmlFor="name">Name</label>
-					<input
-						type="text"
-						defaultValue={name}
-						onChange={handleChange}
-						name="name"
-					/>
-				</div>
-				<div className="contact-input">
-					<label htmlFor="email">Email</label>
-					<input
-						type="email"
-						defaultValue={email}
-						name="email"
-						onChange={handleChange}
-					/>
-				</div>
-				<div className="contact-input">
-					<label htmlFor="message">Message</label>
-					<textarea
-						name="message"
-						defaultValue={message}
-						onChange={handleChange}
-						rows="5"
-					/>
-				</div>
+		<Box pad="large" gap="medium">
+			<Form onSubmit={handleSubmit}>
+				<Box pad="small">
+					<FormField label="Name" name="name" required>
+						<TextInput
+							name="name"
+							defaultValue={name}
+							onChange={handleChange}
+						/>
+					</FormField>
+				</Box>
+				<Box pad="small">
+					<FormField label="Email" name="email" required>
+						<TextInput
+							type="email"
+							name="email"
+							defaultValue={email}
+							onChange={handleChange}
+						/>
+					</FormField>
+				</Box>
+				<Box pad="small">
+					<FormField label="Message" name="message" required>
+						<TextArea
+							name="message"
+							defaultValue={message}
+							onChange={handleChange}
+						/>
+					</FormField>
+				</Box>
+
 				{errorMessage && (
 					<div>
 						<p className="error-text">{errorMessage}</p>
 					</div>
 				)}
 				<button type="submit">Submit</button>
-			</form>
-		</div>
+			</Form>
+		</Box>
 	);
 }
 

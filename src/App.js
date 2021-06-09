@@ -10,6 +10,7 @@ import { Grommet } from "grommet";
 const myTheme = {
 	global: {
 		colors: {
+			focus: "status-ok",
 			active: "#5044ee",
 			black: "#121619",
 			border: {
@@ -28,6 +29,27 @@ const myTheme = {
 		},
 		font: {
 			family: "Roboto",
+		},
+	},
+	button: {
+		default: {
+			border: {
+				width: "1px",
+			},
+			padding: {
+				horizontal: "12px",
+			},
+		},
+	},
+	formField: {
+		border: {
+			color: "",
+			side: "all",
+		},
+		label: {
+			margin: {
+				horizontal: "xsmall",
+			},
 		},
 	},
 };
