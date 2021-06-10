@@ -1,82 +1,55 @@
 import React, { useState } from "react";
-import { Form, FormField, TextInput, TextArea, Box } from "grommet";
+import {
+	Form,
+	TextInputField,
+	TextAreaField,
+	validators,
+} from "grommet-controls";
 
-import { validateEmail } from "../../utils/helpers";
+import { Box, Button, Heading } from "grommet";
 
-function ContactForm() {
-	const [formState, setFormState] = useState({
-		name: "",
-		email: "",
-		message: "",
-	});
-
-	const [errorMessage, setErrorMessage] = useState("");
+export default function ContactForm() {
+	const [formState, setFormState] = useState({});
 
 	const { name, email, message } = formState;
-
-	function handleChange(e) {
-		if (e.target.name === "email") {
-			const isValid = validateEmail(e.target.value);
-			console.log(isValid);
-			if (!isValid) {
-				setErrorMessage("Your email is invalid.");
-			} else {
-				setErrorMessage("");
-			}
-		}
-
-		if (!errorMessage) {
-			setFormState({ ...formState, [e.target.name]: e.target.value });
-		}
-	}
-
-	function handleSubmit(e) {
-		e.preventDefault();
-		console.log(formState);
-	}
-
-	console.log(formState);
 	return (
-		<Box pad="large" gap="medium">
-			<Form onSubmit={handleSubmit}>
-				<Box pad="small">
-					<FormField label="Name" name="name" required>
-						<TextInput
-							name="name"
-							defaultValue={name}
-							onChange={handleChange}
-						/>
-					</FormField>
-				</Box>
-				<Box pad="small">
-					<FormField label="Email" name="email" required>
-						<TextInput
-							type="email"
-							name="email"
-							defaultValue={email}
-							onChange={handleChange}
-						/>
-					</FormField>
-				</Box>
-				<Box pad="small">
-					<FormField label="Message" name="message" required>
-						<TextArea
-							name="message"
-							defaultValue={message}
-							onChange={handleChange}
-						/>
-					</FormField>
-				</Box>
+		<Box align="center">
+			<Box width="medium" margin="large">
+				<Heading>Contact me</Heading>
+				<Form
+					onChange={(name, value) => {
+						console.log(name, value);
+						setFormState(value);
+					}}
+					onSubmit={(values) => setFormState(values)}>
+					<TextInputField
+						label="Name"
+						name="name"
+						validation={[validators.required()]}
+						defaultValue={name}
+					/>
+					<TextInputField
+						label="Email"
+						name="email"
+						validation={[validators.email()]}
+						defaultValue={email}
+					/>
 
-				{errorMessage && (
-					<div>
-						<p className="error-text">{errorMessage}</p>
-					</div>
-				)}
-				<button type="submit">Submit</button>
-			</Form>
+					<TextAreaField
+						label="Message"
+						name="message"
+						validation={[validators.required()]}
+						defaultValue={message}
+					/>
+					<Box
+						tag="footer"
+						margin={{ top: "medium" }}
+						direction="row"
+						justify="between">
+						<Button type="submit" primary label="Send message" />
+					</Box>
+				</Form>
+			</Box>
 		</Box>
 	);
 }
-
-export default ContactForm;

@@ -24,8 +24,8 @@ export default function Portfolio() {
 			title: "Zing",
 			description:
 				"A Socket.IO powered app for creating and joining live chat rooms.",
-			git: "https://github.com/JamesLuu96/zing",
-			demo: "https://zing-chat.herokuapp.com/login",
+			git: "https://github.com/JamesLuu96/zing-chat",
+			demo: "https://zing2.herokuapp.com/",
 			image: zingImg,
 		},
 		{
