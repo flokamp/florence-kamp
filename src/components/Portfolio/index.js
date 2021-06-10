@@ -8,7 +8,6 @@ import {
 	Text,
 	Grid,
 	Button,
-	Anchor,
 } from "grommet";
 
 import zingImg from "../../assets/zing.png";

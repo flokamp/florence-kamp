@@ -10,9 +10,11 @@ import { Grommet, Main, ResponsiveContext } from "grommet";
 const myTheme = {
 	global: {
 		colors: {
+			"light-1": "#E2EDF2",
+			"dark-2": "#447388",
 			focus: "status-ok",
 			active: "#5044ee",
-			black: "#121619",
+			black: "#0D1821",
 			border: {
 				light: "rgba(0,0,0,0.33)",
 			},
@@ -28,7 +30,7 @@ const myTheme = {
 			},
 		},
 		font: {
-			family: "Roboto",
+			family: "Space Mono",
 		},
 	},
 

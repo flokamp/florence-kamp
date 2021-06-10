@@ -15,10 +15,11 @@ export default function ContactForm() {
 	return (
 		<Box align="center">
 			<Box width="medium" margin="large">
-				<Heading>Contact me</Heading>
+				<Heading alignSelf="center" margin="medium">
+					Contact me
+				</Heading>
 				<Form
 					onChange={(name, value) => {
-						console.log(name, value);
 						setFormState(value);
 					}}
 					onSubmit={(values) => setFormState(values)}>
@@ -34,7 +35,6 @@ export default function ContactForm() {
 						validation={[validators.email()]}
 						defaultValue={email}
 					/>
-
 					<TextAreaField
 						label="Message"
 						name="message"
@@ -42,11 +42,17 @@ export default function ContactForm() {
 						defaultValue={message}
 					/>
 					<Box
+						fill="horizontal"
+						alignSelf="center"
 						tag="footer"
-						margin={{ top: "medium" }}
-						direction="row"
-						justify="between">
-						<Button type="submit" primary label="Send message" />
+						margin={{ top: "medium" }}>
+						<Button
+							fill="horizontal"
+							alignSelf="center"
+							type="submit"
+							primary
+							label="Submit"
+						/>
 					</Box>
 				</Form>
 			</Box>

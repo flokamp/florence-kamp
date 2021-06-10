@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Header, Anchor, Nav, Menu, ResponsiveContext } from "grommet";
-
 export default function NavBar({
 	categories,
 	setCurrentCategory,
@@ -11,8 +10,8 @@ export default function NavBar({
 	}, [currentCategory]);
 
 	return (
-		<Header height="xsmall" background="light-1" pad={{ horizontal: "10%" }}>
-			<Anchor href="/" label="Florence Kamp" />
+		<Header height="small" background="light-1" pad={{ horizontal: "8%" }}>
+			<Anchor size="xxlarge" href="/" label="Florence Kamp" />
 			<ResponsiveContext.Consumer>
 				{(responsive) =>
 					responsive === "small" ? (
@@ -28,7 +27,7 @@ export default function NavBar({
 						<Nav direction="row">
 							{categories.map((category) => (
 								<Anchor
-									size="medium"
+									size="large"
 									weight="normal"
 									key={category}
 									label={category}

@@ -4,20 +4,24 @@ import headshotImage from "../../assets/headshot.jpg";
 
 export default function About() {
 	return (
-		<Box justify="center" pad="large" wrap={true} direction="row">
-			<Box pad="small" height="320px" width="320px">
+		<Box margin={{ top: "large" }} wrap={true} justify="center" direction="row">
+			<Box
+				border={{ color: "dark-1", size: "medium" }}
+				margin="small"
+				width="medium">
 				<Image src={headshotImage} fit="cover" />
 			</Box>
-			<Box pad="small">
+			<Box margin="small" width="medium">
 				<Heading
-					level="3"
+					level="2"
+					weight="400"
 					margin={{
 						bottom: "medium",
 					}}>
-					As a <b>UIX designer</b> & <b>full-stack developer</b>, I guess you
-					could say I'm the swiss army knife of software.
+					As a uix designer and full-stack developer, I guess you could say I'm
+					like the swiss army knife of software.
 				</Heading>
-				<Text alignSelf="start" size="medium">
+				<Text alignSelf="start" size="large">
 					If I'm not sketching prototypes or writing code, I'm probably playing
 					chess.
 				</Text>
