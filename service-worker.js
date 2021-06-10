@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/florence-kamp/precache-manifest.00913732e2062e7eb58a75ea7b88178f.js"
+  "/florence-kamp/precache-manifest.c200f1ad6d0a64c9c454abc35f7efff6.js"
 );
 
 self.addEventListener('message', (event) => {
