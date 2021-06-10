@@ -1,27 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "de77332aecfe0d252dbbe06cd493e6f0",
-    "url": "/florence-kamp/c5d722dc57c1a22fc0123826fb375e84.js"
-  },
-  {
-    "revision": "42436c77e79ffd1a8eb0e42365404e08",
+    "revision": "3c6222c45021daed780d5c60508d1387",
     "url": "/florence-kamp/index.html"
   },
   {
-    "revision": "a8af30d8e8ad7039ca11",
-    "url": "/florence-kamp/static/css/main.5102d19d.chunk.css"
+    "revision": "bd794726113a23bcb225",
+    "url": "/florence-kamp/static/css/main.21e5ee02.chunk.css"
   },
   {
-    "revision": "1a7f21160d9918498e3f",
-    "url": "/florence-kamp/static/js/2.a6fc7acb.chunk.js"
+    "revision": "03994416751b127d2c6a",
+    "url": "/florence-kamp/static/js/2.78643f6f.chunk.js"
   },
   {
-    "revision": "a96ddb9fe9f1d6da072fe37b4ffc2b28",
-    "url": "/florence-kamp/static/js/2.a6fc7acb.chunk.js.LICENSE.txt"
+    "revision": "aa4100970f46d7e0ec2af84de3f2740b",
+    "url": "/florence-kamp/static/js/2.78643f6f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a8af30d8e8ad7039ca11",
-    "url": "/florence-kamp/static/js/main.a3ec4225.chunk.js"
+    "revision": "bd794726113a23bcb225",
+    "url": "/florence-kamp/static/js/main.68ef0826.chunk.js"
   },
   {
     "revision": "c6ab8273a695d30ccd9e",
@@ -32,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/florence-kamp/static/media/budgie.015f70dd.png"
   },
   {
-    "revision": "c9e4c1c3d1a5230e9983f87413f9a3ec",
-    "url": "/florence-kamp/static/media/headshot.1dfe702a.jpg"
+    "revision": "4a821f8dd064196761fc39833397be99",
+    "url": "/florence-kamp/static/media/headshot.978733ed.jpg"
   },
   {
     "revision": "e0b83f867265fcd0edca2e05d00112b8",
