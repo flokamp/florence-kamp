@@ -11,7 +11,7 @@ export default function NavBar({
 
 	return (
 		<Header height="small" background="light-1" pad={{ horizontal: "8%" }}>
-			<Anchor size="xxlarge" href="/" label="Florence Kamp" />
+			<Anchor size="xxlarge" href="#about" label="Florence Kamp" />
 			<ResponsiveContext.Consumer>
 				{(responsive) =>
 					responsive === "small" ? (
