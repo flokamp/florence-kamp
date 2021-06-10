@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Nav from "./components/NavBar";
 import About from "./components/About";
 import ContactForm from "./components/Contact";
-import Portfolio from "./components/Work";
+import Work from "./components/Work";
 import Resume from "./components/Resume";
 import Footer from "./components/Footer";
 import { Grommet, Main, ResponsiveContext } from "grommet";

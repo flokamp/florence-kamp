@@ -4,4 +4,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Description
 
-This repo is for my updated developer portfolio. It includes my bio, a, overview of my recent projects, my resume, and a way to contact me.
+This repo is for my updated developer portfolio. It includes my bio, an overview of my recent projects, my resume, and a way to contact me.
