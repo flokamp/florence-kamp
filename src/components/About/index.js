@@ -1,34 +1,27 @@
 import React from "react";
-import { Box, Image, Grid, Heading, Text } from "grommet";
+import { Box, Image, Heading, Text } from "grommet";
 import headshotImage from "../../assets/headshot.jpg";
 
 export default function About() {
 	return (
-		<Grid
-			pad={{ horizontal: "10%" }}
-			wrap="true"
-			areas={[
-				{ name: "headshot", start: [0, 0], end: [0, 0] },
-				{ name: "bio", start: [1, 0], end: [1, 0] },
-			]}
-			columns={["medium", "flex"]}
-			rows={["flex"]}>
-			<Box gridArea="headshot" pad={{ horizontal: "10%" }}>
-				<Image src={headshotImage} width="100%" />
+		<Box justify="center" pad="large" wrap={true} direction="row">
+			<Box pad="small" height="320px" width="320px">
+				<Image src={headshotImage} fit="cover" />
 			</Box>
-			<Box gridArea="bio">
+			<Box pad="small">
 				<Heading
-					level="2"
+					level="3"
 					margin={{
 						bottom: "medium",
 					}}>
-					Designer & developer — the swiss army knife of software
+					As a <b>UIX designer</b> & <b>full-stack developer</b>, I guess you
+					could say I'm the swiss army knife of software.
 				</Heading>
 				<Text alignSelf="start" size="medium">
 					If I'm not sketching prototypes or writing code, I'm probably playing
 					chess.
 				</Text>
 			</Box>
-		</Grid>
+		</Box>
 	);
 }

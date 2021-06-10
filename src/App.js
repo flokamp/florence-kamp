@@ -5,7 +5,7 @@ import ContactForm from "./components/Contact";
 import Portfolio from "./components/Portfolio";
 import Resume from "./components/Resume";
 import Footer from "./components/Footer";
-import { Grommet } from "grommet";
+import { Grommet, Main, ResponsiveContext } from "grommet";
 
 const myTheme = {
 	global: {
@@ -31,16 +31,7 @@ const myTheme = {
 			family: "Roboto",
 		},
 	},
-	button: {
-		default: {
-			border: {
-				width: "1px",
-			},
-			padding: {
-				horizontal: "12px",
-			},
-		},
-	},
+
 	formField: {
 		border: {
 			color: "",
@@ -60,17 +51,22 @@ function App() {
 
 	return (
 		<Grommet theme={myTheme}>
-			<Nav
-				categories={categories}
-				setCurrentCategory={setCurrentCategory}
-				currentCategory={currentCategory}></Nav>
-			<main>
-				{currentCategory === "About" && <About />}
-				{currentCategory === "Portfolio" && <Portfolio />}
-				{currentCategory === "Resume" && <Resume />}
-				{currentCategory === "Contact" && <ContactForm />}
-			</main>
-			<Footer />
+			<ResponsiveContext.Consumer>
+				{(size) => (
+					<Main>
+						<Nav
+							categories={categories}
+							setCurrentCategory={setCurrentCategory}
+							currentCategory={currentCategory}
+						/>
+						{currentCategory === "About" && <About />}
+						{currentCategory === "Portfolio" && <Portfolio />}
+						{currentCategory === "Resume" && <Resume />}
+						{currentCategory === "Contact" && <ContactForm />}
+						<Footer />
+					</Main>
+				)}
+			</ResponsiveContext.Consumer>
 		</Grommet>
 	);
 }

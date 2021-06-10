@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Header, Anchor, Nav } from "grommet";
+import { Header, Anchor, Nav, Menu, ResponsiveContext } from "grommet";
 
 export default function NavBar({
 	categories,
@@ -11,21 +11,37 @@ export default function NavBar({
 	}, [currentCategory]);
 
 	return (
-		<Header pad="small" height="xsmall">
+		<Header height="xsmall" background="light-1" pad={{ horizontal: "10%" }}>
 			<Anchor href="/" label="Florence Kamp" />
-			<Nav direction="row-responsive">
-				{categories.map((category) => (
-					<Anchor
-						className={`${currentCategory === category && `navActive`}`}
-						key={category}
-						label={category}
-						href={`#${category}`}
-						onClick={() => {
-							setCurrentCategory(category);
-						}}
-					/>
-				))}
-			</Nav>
+			<ResponsiveContext.Consumer>
+				{(responsive) =>
+					responsive === "small" ? (
+						<Menu
+							items={categories.map((category) => ({
+								label: category,
+								onClick: () => {
+									setCurrentCategory(category);
+								},
+							}))}
+						/>
+					) : (
+						<Nav direction="row">
+							{categories.map((category) => (
+								<Anchor
+									size="medium"
+									weight="normal"
+									key={category}
+									label={category}
+									href={`#${category}`}
+									onClick={() => {
+										setCurrentCategory(category);
+									}}
+								/>
+							))}
+						</Nav>
+					)
+				}
+			</ResponsiveContext.Consumer>
 		</Header>
 	);
 }

@@ -1,23 +1,19 @@
 import React, { useState } from "react";
 import { Document, Page } from "react-pdf/dist/umd/entry.webpack";
+import { Anchor } from "grommet";
 
 import resumePDF from "../../assets/resume.pdf";
 
 function Resume() {
-	const [numPages, setNumPages] = useState(1);
 	const [pageNumber, setPageNumber] = useState(1);
-
-	function onDocumentLoadSuccess({ numPages }) {
-		setNumPages(numPages);
-	}
 
 	return (
 		<section id="resume">
-			<button id="download-btn" href={resumePDF} download="resume.pdf">
-				Download resume
-			</button>
+			<Anchor pad="small" href={resumePDF} download="resume.pdf">
+				Download
+			</Anchor>
 
-			<Document file={resumePDF} onLoadSuccess={onDocumentLoadSuccess}>
+			<Document file={resumePDF}>
 				<Page pageNumber={pageNumber} />
 			</Document>
 		</section>

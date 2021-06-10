@@ -8,6 +8,7 @@ import {
 	Text,
 	Grid,
 	Button,
+	Anchor,
 } from "grommet";
 
 import zingImg from "../../assets/zing.png";
@@ -68,8 +69,8 @@ export default function Portfolio() {
 
 	return (
 		<Grid
+			pad="large"
 			gap="large"
-			rows="medium"
 			columns={{ count: "fit", size: ["small", "medium"] }}
 			justifyContent="center">
 			{projects.map((project) => (
@@ -96,14 +97,14 @@ export default function Portfolio() {
 							</Text>
 							<Box align="start" fill="horizontal" direction="row">
 								<Button
-									size="small"
+									size="xsmall"
 									margin="xsmall"
 									href={`${project.git}`}
 									label="Github"
 								/>
 								<Button
 									margin="xsmall"
-									size="small"
+									size="xsmall"
 									href={`${project.demo}`}
 									label="Demo"
 								/>

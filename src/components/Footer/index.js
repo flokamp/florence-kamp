@@ -1,13 +1,19 @@
 import React from "react";
-import { Footer } from "grommet";
+import { Box } from "grommet";
 import { Github, Linkedin, Instagram } from "grommet-icons";
 
 export default function FooterEl() {
 	return (
-		<Footer pad={{ horizontal: "40%" }} background="light-2">
+		<Box
+			direction="row"
+			justify="evenly"
+			flex={false}
+			background="light-3"
+			margin={{ top: "2%" }}
+			pad={{ vertical: "2%", horizontal: "40%" }}>
 			<Github />
 			<Linkedin />
 			<Instagram />
-		</Footer>
+		</Box>
 	);
 }
