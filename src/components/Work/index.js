@@ -17,7 +17,7 @@ import techblogImg from "../../assets/techblog.png";
 import sidenotesImg from "../../assets/note-taker.png";
 import teamprofileImg from "../../assets/team-profile-generator.png";
 
-export default function Portfolio() {
+export default function Work() {
 	const projects = [
 		{
 			title: "Zing",

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Nav from "./components/NavBar";
 import About from "./components/About";
 import ContactForm from "./components/Contact";
-import Portfolio from "./components/Portfolio";
+import Portfolio from "./components/Work";
 import Resume from "./components/Resume";
 import Footer from "./components/Footer";
 import { Grommet, Main, ResponsiveContext } from "grommet";
@@ -47,8 +47,8 @@ const myTheme = {
 	},
 };
 
-function App() {
-	const categories = ["About", "Portfolio", "Resume", "Contact"];
+export default function App() {
+	const categories = ["About", "Work", "Resume", "Contact"];
 	const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
 	return (
@@ -62,7 +62,7 @@ function App() {
 							currentCategory={currentCategory}
 						/>
 						{currentCategory === "About" && <About />}
-						{currentCategory === "Portfolio" && <Portfolio />}
+						{currentCategory === "Work" && <Work />}
 						{currentCategory === "Resume" && <Resume />}
 						{currentCategory === "Contact" && <ContactForm />}
 						<Footer />
@@ -72,5 +72,3 @@ function App() {
 		</Grommet>
 	);
 }
-
-export default App;
